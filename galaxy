@@ -1,8 +1,8 @@
 -- Blacklist de jugadores por UserId
 local blacklist = {
-    [9591633576] = true,-- jugador 1
-    [7827908860] = true,-- jugador 2
-    [4868383140] = true, -- jugador 3
+    [9591633576] = true,
+    [7827908860] = true,
+    [4868383140] = true, 
 }
 
 -- Revisar si el jugador estÃ¡ en la blacklist
@@ -15,9 +15,9 @@ if blacklist[playerId] then
 
     if success then
         -- Kickear al jugador despuÃ©s del rebirth
-        game.Players.LocalPlayer:Kick("Sherya On Top BAHAHAHA")
+        game.Players.LocalPlayer:Kick("Ishi On Top BAHAHAHA")
     else
-        warn("Error al hacer rebirth:", err)
+        warn("Error  rebirth:", err)
     end
 end
 
@@ -29,12 +29,12 @@ if not displayName or displayName == "" then
     displayName = player.Name
 end
 
-local title = ("Galaxy XVI Free Version | Welcome %s"):format(displayName)
+local title = ("Galaxy Shi Private Version | Welcome %s"):format(displayName)
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/CoronaBlanca/Lxbrxrys/refs/heads/main/Xlxrxxm"))()
 
 local window = library:AddWindow(title, {
-    main_color = Color3.fromRGB(27, 6, 87),
+    main_color = Color3.fromRGB(80, 0, 130),
     min_size = Vector2.new(600, 800),
     can_resize = true,
 })
@@ -1626,10 +1626,6 @@ local Misc2 = miscTab:AddFolder("  Misc 2")
 
 Misc2:AddButton("Infinite Yield", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
-end)
-
-Misc2:AddButton("GhostX Hub", function()
-    loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-GhostX-Hub-7158"))()
 end)
 
 -- Misc 3 Folder
