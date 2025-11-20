@@ -1,3 +1,12 @@
+local SCRIPT_KEY = "ARVELYNXSAI" 
+local SCRIPT_NAME = "IShi Key" 
+local MADE_BY = "SAILYN" 
+local KEY_NOTE = "Enter the correct key to continue. Love by Ishi!" 
+ 
+local function StartMainScript()
+    
+    print("KEY ACCEPTED: Main script is executing!")
+
 local blacklist = {
     [9591633576] = true,
     [7827908860] = true,
@@ -4221,7 +4230,170 @@ creditsTab:AddLabel("Script Made By Ishi")
 creditsTab:AddLabel("Sailyn")
 creditsTab:AddLabel("Instagram : ishikindness")
 creditsTab:AddLabel("Facebook : Sai Espinoz")
-creditsTab:AddLabel("Tik tok : k13s_1")
+creditsTab:AddLabel("TikTok : k13s_1")
 creditsTab:AddLabel("Discord : ishi_1911")
 creditsTab:AddLabel("Roblox : DarkPhantoM_Prince")
 creditsTab:AddLabel("Thanks for using my Script")
+    
+end
+ 
+local ScreenGui = Instance.new("ScreenGui")
+local ShadowFrame = Instance.new("Frame")
+local KeySystem = Instance.new("Frame")
+local HeaderFrame = Instance.new("Frame")
+local HeaderGradient = Instance.new("UIGradient")
+local title = Instance.new("TextLabel")
+
+local KeyTextbox = Instance.new("TextBox")
+local UICorner_Textbox = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local ButtonGradient = Instance.new("UIGradient")
+local UICorner_Button = Instance.new("UICorner")
+
+local scriptname = Instance.new("TextLabel")
+local madeby = Instance.new("TextLabel")
+local note = Instance.new("TextLabel")
+local UICorner_Main = Instance.new("UICorner")
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ShadowFrame.Parent = ScreenGui
+ShadowFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ShadowFrame.BackgroundTransparency = 0.5
+ShadowFrame.Position = UDim2.new(0.32, 5, 0.27, 5)
+ShadowFrame.Size = UDim2.new(0.35, 0, 0.45, 0)
+ShadowFrame.BorderSizePixel = 0
+UICorner_Main.CornerRadius = UDim.new(0, 10)
+UICorner_Main.Parent = ShadowFrame
+
+KeySystem.Name = "KeySystem"
+KeySystem.Parent = ScreenGui
+KeySystem.BackgroundColor3 = Color3.fromRGB(25, 25, 30)
+KeySystem.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KeySystem.BorderSizePixel = 0
+KeySystem.Position = UDim2.new(0.32, 0, 0.27, 0) 
+KeySystem.Size = UDim2.new(0.35, 0, 0.45, 0) 
+KeySystem.Selectable = true
+KeySystem.Active = true
+KeySystem.Draggable = true
+UICorner_Main:Clone().Parent = KeySystem
+
+HeaderFrame.Parent = KeySystem
+HeaderFrame.BackgroundColor3 = Color3.fromRGB(80, 0, 130)
+HeaderFrame.Size = UDim2.new(1, 0, 0.15, 0)
+HeaderFrame.Position = UDim2.new(0, 0, 0, 0)
+HeaderFrame.BorderSizePixel = 0
+HeaderGradient.Parent = HeaderFrame
+HeaderGradient.Color = ColorSequence.new{
+    ColorSequenceKeypoint.new(0.00, Color3.fromRGB(150, 45, 200)),
+    ColorSequenceKeypoint.new(1.00, Color3.fromRGB(80, 0, 130))
+}
+HeaderGradient.Rotation = 90
+
+title.Name = "title"
+title.Parent = HeaderFrame
+title.BackgroundTransparency = 1.000
+title.Position = UDim2.new(0, 0, 0, 0)
+title.Size = UDim2.new(1, 0, 1, 0)
+title.Font = Enum.Font.GothamBold
+title.Text = "🔑 KEY SYSTEM"
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.TextScaled = true
+title.TextSize = 14.000
+title.TextWrapped = true
+
+scriptname.Name = "scriptname"
+scriptname.Parent = KeySystem
+scriptname.BackgroundTransparency = 1.000
+scriptname.Position = UDim2.new(0, 0, 0.18, 0)
+scriptname.Size = UDim2.new(1, 0, 0.06, 0)
+scriptname.Font = Enum.Font.Code
+scriptname.Text = SCRIPT_NAME
+scriptname.TextColor3 = Color3.fromRGB(150, 45, 200)
+scriptname.TextScaled = true
+scriptname.TextSize = 14.000
+scriptname.TextWrapped = true
+ 
+madeby.Name = "madebyIShI"
+madeby.Parent = KeySystem
+madeby.BackgroundTransparency = 1.000
+madeby.Position = UDim2.new(0, 0, 0.25, 0)
+madeby.Size = UDim2.new(1, 0, 0.06, 0)
+madeby.Font = Enum.Font.Code
+madeby.Text = "Made by: IShI" .. MADE_BY
+madeby.TextColor3 = Color3.fromRGB(150, 45, 200)
+madeby.TextScaled = true
+madeby.TextSize = 14.000
+madeby.TextWrapped = true
+madeby.Visible = true
+ 
+TextButton.Parent = KeySystem
+TextButton.BackgroundColor3 = Color3.fromRGB(80, 0, 130)
+TextButton.BackgroundTransparency = 0.0
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.09, 0, 0.50, 0)
+TextButton.Size = UDim2.new(0.82, 0, 0.12, 0)
+TextButton.Font = Enum.Font.GothamBold
+TextButton.Text = "Check Key"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+ButtonGradient.Parent = TextButton
+ButtonGradient.Color = ColorSequence.new{
+    ColorSequenceKeypoint.new(0.00, Color3.fromRGB(150, 45, 200)),
+    ColorSequenceKeypoint.new(1.00, Color3.fromRGB(80, 0, 130))
+}
+ButtonGradient.Rotation = 90
+UICorner_Button.CornerRadius = UDim.new(0, 8)
+UICorner_Button.Parent = TextButton
+ 
+KeyTextbox.Name = "KeyTextbox"
+KeyTextbox.Parent = KeySystem
+KeyTextbox.BackgroundColor3 = Color3.fromRGB(40, 40, 45)
+KeyTextbox.BackgroundTransparency = 0.0
+KeyTextbox.BorderColor3 = Color3.fromRGB(150, 45, 200)
+KeyTextbox.BorderSizePixel = 1
+KeyTextbox.Position = UDim2.new(0.09, 0, 0.70, 0)
+KeyTextbox.Size = UDim2.new(0.82, 0, 0.12, 0)
+KeyTextbox.Font = Enum.Font.Gotham
+KeyTextbox.Text = "Enter Key"
+KeyTextbox.TextColor3 = Color3.fromRGB(255, 255, 255)
+KeyTextbox.TextScaled = true
+KeyTextbox.TextSize = 14.000
+KeyTextbox.TextWrapped = true
+KeyTextbox.ClearTextOnFocus = true
+KeyTextbox.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_Textbox.CornerRadius = UDim.new(0, 5)
+UICorner_Textbox.Parent = KeyTextbox
+ 
+note.Name = "note"
+note.Parent = KeySystem
+note.BackgroundTransparency = 1.000
+note.Position = UDim2.new(0, 0, 0.88, 0)
+note.Size = UDim2.new(1, 0, 0.08, 0)
+note.Font = Enum.Font.Gotham
+note.Text = KEY_NOTE
+note.TextColor3 = Color3.fromRGB(150, 45, 200)
+note.TextScaled = true
+note.TextSize = 14.000
+note.TextWrapped = true
+ 
+TextButton.MouseButton1Click:Connect(function()
+	if KeyTextbox.Text == SCRIPT_KEY then
+		TextButton.Text = "Palo Correct! Loading..."
+		task.wait(1)
+		StartMainScript()
+		ScreenGui:Destroy()
+	else
+		TextButton.Text = "Tang Ina Mo Mali! Try again."
+		task.wait(2)
+		TextButton.Text = "Submit Key"
+	end
+end)
+ 
+scriptname.Text = SCRIPT_NAME
