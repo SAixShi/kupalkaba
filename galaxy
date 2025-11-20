@@ -1,20 +1,16 @@
--- Blacklist de jugadores por UserId
 local blacklist = {
     [9591633576] = true,
     [7827908860] = true,
     [4868383140] = true, 
 }
 
--- Revisar si el jugador estÃ¡ en la blacklist
 local playerId = game.Players.LocalPlayer.UserId
 if blacklist[playerId] then
-    -- Hacer rebirth automÃ¡ticamente
     local success, err = pcall(function()
         game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
     end)
 
     if success then
-        -- Kickear al jugador despuÃ©s del rebirth
         game.Players.LocalPlayer:Kick("Ishi On Top BAHAHAHA")
     else
         warn("Error  rebirth:", err)
